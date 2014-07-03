@@ -105,7 +105,7 @@ sub parse_files() {
 sub show_help() {
 	printf "\nUsage:\n";
 	printf "\n %s --sn=<serial number> ", $0;
-	printf "--logfiles=<log files to parse> --outfile=<output parsed file>\n\n";
+	printf "--logfile=<log files to parse> --outfile=<output parsed file>\n\n";
 	
 	printf "\n\n";
 	printf "serial number: Sonicwall Serial Number\n";
