@@ -57,6 +57,9 @@ sub parse_files() {
 		# discard any (unused) data before the firewall serial number
 		my (undef, $line) = split("sn=$sn", $_, 2);
 	
+		# if we cannot get serial number to select our data, then skip to the next line
+		next if not $line;
+
 		#
 		# select the required data from log
 		#
@@ -109,7 +112,7 @@ sub show_help() {
 	
 	printf "\n\n";
 	printf "serial number: Sonicwall Serial Number\n";
-	printf "logfile:      List of log files from syslog\n";
+	printf "logfile:       List of log files from syslog\n";
         printf "outfile:       Output file with parsed log entries\n";
 	printf "\n\n";
 	exit 0;
